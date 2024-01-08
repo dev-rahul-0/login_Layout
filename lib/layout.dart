@@ -10,8 +10,8 @@ class Layout extends StatefulWidget {
 class _LayoutState extends State<Layout> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Stack(
+    return Scaffold(
+      body: Stack(
         children: [
           Column(
             children: [
@@ -34,12 +34,17 @@ class _LayoutState extends State<Layout> {
                 ),
               ),
               SizedBox(height: 10,),
-              Container(
-                height: 280,
-                width: 500,
-                color: Colors.white,
+              Text("Username",style: TextStyle(fontWeight: FontWeight.bold),),
+              SizedBox(
+                height: 50,
+                width: 380,
+                child: TextField(
+                  decoration: InputDecoration(hintText: 'Enter Username',
+                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30),)
+                  ),
+
+                ),
               )
-              
             ],
           )
         ],
