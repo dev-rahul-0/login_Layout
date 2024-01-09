@@ -16,9 +16,10 @@ class _LayoutState extends State<Layout> {
           Column(
             children: [
               Container(
-                child:   Image(
+                child: Image(
                   image: NetworkImage(
-                      'https://www.rkinfotechindia.com/wp-content/uploads/2018/11/ui-ux-design-img.png'),),
+                      'https://www.rkinfotechindia.com/wp-content/uploads/2018/11/ui-ux-design-img.png'),
+                ),
                 height: 400,
                 width: 500,
                 decoration: BoxDecoration(
@@ -33,18 +34,63 @@ class _LayoutState extends State<Layout> {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
-              Text("Username",style: TextStyle(fontWeight: FontWeight.bold),),
               SizedBox(
-                height: 50,
-                width: 380,
-                child: TextField(
-                  decoration: InputDecoration(hintText: 'Enter Username',
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30),)
-                  ),
-
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 25, right: 200),
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                      color: Colors.purple),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                  height: 50,
+                  width: 320,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'Username',
+                        contentPadding: EdgeInsets.only(left: 25),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(30))),
+                  )),
+              SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                  height: 50,
+                  width: 320,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'Password',
+                        contentPadding: EdgeInsets.only(left: 25),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(30))),
+                  )),
+              SizedBox(
+                height: 15,
+              ),
+              SizedBox(
+                  height: 50,
+                  width: 320,
+                  child: TextField(
+                    decoration: InputDecoration(fillColor: Colors.purple,
+                        filled: true,
+                        hintText: 'Sign in',
+                        contentPadding: EdgeInsets.only(left: 140),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(30))),
+                  )),
+              SizedBox(height: 10,)
             ],
           )
         ],
