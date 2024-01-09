@@ -16,7 +16,7 @@ class _LayoutState extends State<Layout> {
           Column(
             children: [
               Container(
-                child: Image(
+                child: const Image(
                   image: NetworkImage(
                       'https://www.rkinfotechindia.com/wp-content/uploads/2018/11/ui-ux-design-img.png'),
                 ),
@@ -26,7 +26,7 @@ class _LayoutState extends State<Layout> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(25),
                   boxShadow: [
-                    BoxShadow(
+                    const BoxShadow(
                       color: Colors.purple,
                       offset: Offset(0.0, 8.0), //(x,y)
                       blurRadius: 6.0,
@@ -34,11 +34,11 @@ class _LayoutState extends State<Layout> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25, right: 200),
+              const Padding(
+                padding: EdgeInsets.only(top: 25, right: 200),
                 child: Text(
                   "Login",
                   style: TextStyle(
@@ -47,7 +47,7 @@ class _LayoutState extends State<Layout> {
                       color: Colors.purple),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -56,12 +56,12 @@ class _LayoutState extends State<Layout> {
                   child: TextField(
                     decoration: InputDecoration(
                         hintText: 'Username',
-                        contentPadding: EdgeInsets.only(left: 25),
+                        contentPadding: const EdgeInsets.only(left: 25),
                         enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey),
+                            borderSide: const BorderSide(color: Colors.grey),
                             borderRadius: BorderRadius.circular(30))),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               SizedBox(
@@ -70,12 +70,12 @@ class _LayoutState extends State<Layout> {
                   child: TextField(
                     decoration: InputDecoration(
                         hintText: 'Password',
-                        contentPadding: EdgeInsets.only(left: 25),
+                        contentPadding: const EdgeInsets.only(left: 25),
                         enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey),
+                            borderSide: const BorderSide(color: Colors.grey),
                             borderRadius: BorderRadius.circular(30))),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               SizedBox(
@@ -85,12 +85,12 @@ class _LayoutState extends State<Layout> {
                     decoration: InputDecoration(fillColor: Colors.purple,
                         filled: true,
                         hintText: 'Sign in',
-                        contentPadding: EdgeInsets.only(left: 140),
+                        contentPadding: const EdgeInsets.only(left: 140),
                         enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey),
+                            borderSide: const BorderSide(color: Colors.grey),
                             borderRadius: BorderRadius.circular(30))),
                   )),
-              SizedBox(height: 10,)
+              const SizedBox(height: 10,)
             ],
           )
         ],
