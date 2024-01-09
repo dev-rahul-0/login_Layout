@@ -27,7 +27,7 @@ class _LayoutState extends State<Layout> {
                   borderRadius: BorderRadius.circular(25),
                   boxShadow: [
                     const BoxShadow(
-                      color: Colors.purple,
+                      color: Colors.deepPurple,
                       offset: Offset(0.0, 8.0), //(x,y)
                       blurRadius: 6.0,
                     ),
@@ -44,7 +44,7 @@ class _LayoutState extends State<Layout> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.purple),
+                      color: Colors.deepPurple),
                 ),
               ),
               const SizedBox(
@@ -78,19 +78,12 @@ class _LayoutState extends State<Layout> {
               const SizedBox(
                 height: 15,
               ),
-              SizedBox(
-                  height: 50,
-                  width: 320,
-                  child: TextField(
-                    decoration: InputDecoration(fillColor: Colors.purple,
-                        filled: true,
-                        hintText: 'Sign in',
-                        contentPadding: const EdgeInsets.only(left: 140),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(30))),
-                  )),
-              const SizedBox(height: 10,)
+              ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(minimumSize: Size(320, 50),
+                    backgroundColor: Theme.of(context).colorScheme.inversePrimary
+                  ),
+                  child: Text('Sign in'))
             ],
           )
         ],
