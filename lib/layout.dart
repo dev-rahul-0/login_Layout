@@ -83,6 +83,12 @@ class _LayoutState extends State<Layout> {
                   style: ElevatedButton.styleFrom(minimumSize: Size(320, 50),
                     backgroundColor: Theme.of(context).colorScheme.inversePrimary
                   ),
+                  child: Text('Sign in')),
+              ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(minimumSize: Size(320, 50),
+                      backgroundColor: Theme.of(context).colorScheme.inversePrimary
+                  ),
                   child: Text('Sign in'))
             ],
           )
