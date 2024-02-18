@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_interface/register.dart';
 
 import 'layout.dart';
 
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)
       ),
-      home: Layout(),
+      initialRoute: 'layout',
+      routes: {
+        'layout': (context) => Layout(),
+        'register': (context) => RegisterScreen()
+      },
     );
   }
 }

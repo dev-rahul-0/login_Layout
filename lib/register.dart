@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-class Layout extends StatefulWidget {
-  const Layout({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<Layout> createState() => _LayoutState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LayoutState extends State<Layout> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +40,7 @@ class _LayoutState extends State<Layout> {
                 const Padding(
                   padding: EdgeInsets.only(top: 25, right: 200),
                   child: Text(
-                    "Login",
+                    "  Register",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
@@ -70,6 +69,20 @@ class _LayoutState extends State<Layout> {
                     width: 320,
                     child: TextField(
                       decoration: InputDecoration(
+                          hintText: 'E-mail',
+                          contentPadding: const EdgeInsets.only(left: 25),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(30))),
+                    )),
+                const SizedBox(
+                  height: 8,
+                ),
+                SizedBox(
+                    height: 50,
+                    width: 320,
+                    child: TextField(
+                      decoration: InputDecoration(
                           hintText: 'Password',
                           contentPadding: const EdgeInsets.only(left: 25),
                           enabledBorder: OutlineInputBorder(
@@ -82,23 +95,23 @@ class _LayoutState extends State<Layout> {
                 ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(320, 50),
+                        minimumSize: Size(320, 50),
                         backgroundColor:
-                            Theme.of(context).colorScheme.inversePrimary),
-                    child: const Text('Sign in')),
-                const SizedBox(
-                  height: 25,
+                        Theme.of(context).colorScheme.inversePrimary),
+                    child: Text('Register ')),
+                SizedBox(
+                  height: 10,
                 ),
                 Row(
                   children: [
                     const Padding(
-                      padding: EdgeInsets.only(left: 80),
-                      child: Text("Don't have Account? ",
+                      padding: EdgeInsets.only(left: 100),
+                      child: Text("You have Account? ",
                           style: TextStyle(color: Colors.purple)),
                     ),
                     TextButton(onPressed: () {
-                      Navigator.pushNamed(context, 'register');
-                    }, child: const Text("Register"))
+                      Navigator.pushNamed(context, 'layout');
+                    }, child: const Text("Log-in"))
                   ],
                 )
               ],
